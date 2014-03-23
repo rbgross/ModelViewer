@@ -49,6 +49,111 @@ public class GLES20Renderer implements GLSurfaceView.Renderer {
 			Log.e("MainActivity", "The file " + modelName + " could not be found.");
 		}
 		
+		modelName = "meshes/large_spike_ball.vmf";
+		try {
+			ResourceManager.loadMesh(modelName, this.context.getAssets().open(modelName));
+		} catch (IOException e) {
+			Log.e("MainActivity", "The file " + modelName + " could not be found.");
+		}
+		
+		modelName = "meshes/large_sqr_pyr.vmf";
+		try {
+			ResourceManager.loadMesh(modelName, this.context.getAssets().open(modelName));
+		} catch (IOException e) {
+			Log.e("MainActivity", "The file " + modelName + " could not be found.");
+		}
+		
+		modelName = "meshes/large_tri_pyr.vmf";
+		try {
+			ResourceManager.loadMesh(modelName, this.context.getAssets().open(modelName));
+		} catch (IOException e) {
+			Log.e("MainActivity", "The file " + modelName + " could not be found.");
+		}
+		
+		modelName = "meshes/lg_ell.vmf";
+		try {
+			ResourceManager.loadMesh(modelName, this.context.getAssets().open(modelName));
+		} catch (IOException e) {
+			Log.e("MainActivity", "The file " + modelName + " could not be found.");
+		}
+		
+		modelName = "meshes/lg_hplus.vmf";
+		try {
+			ResourceManager.loadMesh(modelName, this.context.getAssets().open(modelName));
+		} catch (IOException e) {
+			Log.e("MainActivity", "The file " + modelName + " could not be found.");
+		}
+		
+		modelName = "meshes/lg_plus.vmf";
+		try {
+			ResourceManager.loadMesh(modelName, this.context.getAssets().open(modelName));
+		} catch (IOException e) {
+			Log.e("MainActivity", "The file " + modelName + " could not be found.");
+		}
+		
+		modelName = "meshes/lg_step.vmf";
+		try {
+			ResourceManager.loadMesh(modelName, this.context.getAssets().open(modelName));
+		} catch (IOException e) {
+			Log.e("MainActivity", "The file " + modelName + " could not be found.");
+		}
+		
+		modelName = "meshes/long_hex_prism.vmf";
+		try {
+			ResourceManager.loadMesh(modelName, this.context.getAssets().open(modelName));
+		} catch (IOException e) {
+			Log.e("MainActivity", "The file " + modelName + " could not be found.");
+		}
+		
+		modelName = "meshes/long_rect_prism.vmf";
+		try {
+			ResourceManager.loadMesh(modelName, this.context.getAssets().open(modelName));
+		} catch (IOException e) {
+			Log.e("MainActivity", "The file " + modelName + " could not be found.");
+		}
+		
+		modelName = "meshes/rnd_cube_panel.vmf";
+		try {
+			ResourceManager.loadMesh(modelName, this.context.getAssets().open(modelName));
+		} catch (IOException e) {
+			Log.e("MainActivity", "The file " + modelName + " could not be found.");
+		}
+		
+		modelName = "meshes/rnd_hex_panel.vmf";
+		try {
+			ResourceManager.loadMesh(modelName, this.context.getAssets().open(modelName));
+		} catch (IOException e) {
+			Log.e("MainActivity", "The file " + modelName + " could not be found.");
+		}
+		
+		modelName = "meshes/rnd_tri_panel.vmf";
+		try {
+			ResourceManager.loadMesh(modelName, this.context.getAssets().open(modelName));
+		} catch (IOException e) {
+			Log.e("MainActivity", "The file " + modelName + " could not be found.");
+		}
+		
+		modelName = "meshes/token.vmf";
+		try {
+			ResourceManager.loadMesh(modelName, this.context.getAssets().open(modelName));
+		} catch (IOException e) {
+			Log.e("MainActivity", "The file " + modelName + " could not be found.");
+		}
+		
+		modelName = "meshes/turd.vmf";
+		try {
+			ResourceManager.loadMesh(modelName, this.context.getAssets().open(modelName));
+		} catch (IOException e) {
+			Log.e("MainActivity", "The file " + modelName + " could not be found.");
+		}
+		
+		modelName = "meshes/the_enterprezze.vmf";
+		try {
+			ResourceManager.loadMesh(modelName, this.context.getAssets().open(modelName));
+		} catch (IOException e) {
+			Log.e("MainActivity", "The file " + modelName + " could not be found.");
+		}
+		
 		GLES20ShaderFactory.diffuseSpecular();
 		
 		//Create a basic shader and activate it
@@ -65,7 +170,7 @@ public class GLES20Renderer implements GLSurfaceView.Renderer {
 		//Calculate the value for a view matrix and store that value for this
 		//shader on the graphics card
 		float view[] = new float[16];		
-		Matrix.setLookAtM(view, 0, -1.5f, 1.5f, 1.5f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+		Matrix.setLookAtM(view, 0, -5f, 5f, 5f, 0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);
 		this.mActiveShader.setUniform("view", view);
 		
 		//Store the value for the light position on the graphics card
