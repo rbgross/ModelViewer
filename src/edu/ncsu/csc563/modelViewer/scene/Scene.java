@@ -24,6 +24,7 @@ public class Scene {
 	private Actor token;
 	private Actor turd;
 	private Actor the_enterprezze;
+	private Actor adorbs;
 	
 	private Scene() {
 		this.cube = ActorFactory.cube();
@@ -42,6 +43,7 @@ public class Scene {
 		this.token = ActorFactory.token();
 		this.turd = ActorFactory.turd();
 		this.the_enterprezze = ActorFactory.the_enterprezze();
+		this.adorbs = ActorFactory.adorbs();
 		
 		this.actor = this.cube;
 	}
@@ -104,6 +106,8 @@ public class Scene {
 			this.actor = this.turd;
 		} else if (this.actor == this.turd) {
 			this.actor = this.the_enterprezze;
+		} else if (this.actor == this.the_enterprezze) {
+			this.actor = this.adorbs;
 		} else {
 			this.actor = this.cube;
 		}

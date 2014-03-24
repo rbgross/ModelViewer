@@ -154,6 +154,13 @@ public class GLES20Renderer implements GLSurfaceView.Renderer {
 			Log.e("MainActivity", "The file " + modelName + " could not be found.");
 		}
 		
+		modelName = "meshes/AdorbsShip.vmf";
+		try {
+			ResourceManager.loadMesh(modelName, this.context.getAssets().open(modelName));
+		} catch (IOException e) {
+			Log.e("MainActivity", "The file " + modelName + " could not be found.");
+		}
+		
 		GLES20ShaderFactory.diffuseSpecular();
 		
 		//Create a basic shader and activate it
